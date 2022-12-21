@@ -15,8 +15,6 @@ arrayOfBtnEl.forEach(btn => {
 		}
 		valueEl.textContent = counterValue;
 	});
-
-	
 });
 
 function counterIncrement() {
