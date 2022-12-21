@@ -6,7 +6,7 @@ function onBlurInput(event) {
 	const maxLength = +event.currentTarget.dataset.length;
 	const currentNumberOfSymbol = inputEl.value.trim().split('').length;
 
-	if (currentNumberOfSymbol <= maxLength && currentNumberOfSymbol > 0) {
+	if (currentNumberOfSymbol === maxLength) {
 		inputEl.classList.add("valid");
 		inputEl.classList.remove("invalid");
 		return;
@@ -14,8 +14,6 @@ function onBlurInput(event) {
 
 	inputEl.classList.add("invalid");
 	inputEl.classList.remove("valid");
-
-	console.log(currentNumberOfSymbol);
 }
 
 

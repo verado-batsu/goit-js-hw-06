@@ -11,13 +11,14 @@ function onSubmitForm(event) {
 	event.preventDefault();
 	const { elements: { email, password } } = event.currentTarget;
 
-	if (email.value.trim() === '' || password.value.trim() === '') {
-		alert("Всі поля повинні бути заповнені!");
-	};
-
 	const userData = {
 		[email.name]: email.value.trim(),
 		[password.name]: password.value.trim(),
+	};
+
+	if (email.value.trim() === '' || password.value.trim() === '') {
+		alert("Всі поля повинні бути заповнені!");
+		return;
 	};
 
 	console.log(userData);
